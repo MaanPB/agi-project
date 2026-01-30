@@ -88,4 +88,6 @@ Desktop.ini
 tmp/
 temp/
 *.tmp
+
+# Claude artifacts (our AI session files)
 .claude/
