@@ -1,0 +1,71 @@
+# AGI Project Configuration
+
+# Random seed for reproducibility
+seed: 42
+
+# Device configuration
+device: "cuda"  # Options: "cuda", "cpu", "mps" (for Mac M1/M2)
+
+# Paths
+paths:
+  data_dir: "data"
+  models_dir: "models"
+  logs_dir: "logs"
+  checkpoints_dir: "models/checkpoints"
+  vector_store_dir: "data/vector_store"
+  knowledge_graph_dir: "data/knowledge_graph"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "json"
+  file: "logs/agi_core.log"
+
+# Memory settings
+memory:
+  vector_db:
+    index_type: "IndexFlatL2"  # FAISS index type
+    embedding_model: "all-MiniLM-L6-v2"
+    dimension: 384
+    top_k: 5
+  
+  knowledge_graph:
+    max_triples: 10000
+    auto_save: true
+
+# Model settings
+model:
+  hidden_dims: [256, 128, 64]
+  dropout: 0.3
+  learning_rate: 0.001
+  batch_size: 32
+  num_epochs: 10
+
+# Training settings
+training:
+  checkpoint_frequency: 5  # Save every N epochs
+  early_stopping_patience: 10
+  validation_split: 0.2
+
+# Agent settings
+agent:
+  max_tool_calls: 5
+  timeout: 30  # seconds
+  max_memory_retrieval: 10
+
+# Safety settings
+safety:
+  enable_pii_detection: true
+  enable_content_moderation: true
+  max_output_length: 2000
+  require_human_approval: false
+
+# Experiment tracking
+experiment:
+  use_wandb: false
+  project_name: "agi_project"
+  
+# Development settings
+dev:
+  debug_mode: false
+  verbose: true

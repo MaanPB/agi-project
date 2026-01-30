@@ -1,0 +1,48 @@
+# Core Dependencies
+numpy>=1.21.0
+pandas>=1.3.0
+pyyaml>=6.0
+
+# Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.30.0
+
+# Vector Store & Embeddings
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.0
+
+# Knowledge Graph
+networkx>=3.0
+
+# API & Web
+flask>=2.3.0
+requests>=2.31.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Logging & Monitoring
+wandb>=0.15.0
+
+# NLP (for future phases)
+spacy>=3.5.0
+nltk>=3.8.0
+
+# Computer Vision (for future phases)
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Audio (for future phases)
+librosa>=0.10.0
+
+# Development Tools
+black>=23.0.0
+flake8>=6.0.0
+ipython>=8.12.0
+jupyter>=1.0.0
